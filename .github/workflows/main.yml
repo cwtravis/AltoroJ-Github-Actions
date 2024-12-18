@@ -37,6 +37,6 @@ jobs:
           asoc_secret: ${{secrets.ASOC_SECRET}}
           application_id: ${{secrets.ASOC_APPID}}
           wait_for_analysis: true
-          analysis_timout_minutes: 20
+          analysis_timeout_minutes: 20
           fail_for_noncompliance: true
           
