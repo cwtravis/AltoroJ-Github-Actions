@@ -6,15 +6,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Run ASoC DAST Scan
-        uses: antonychiu2/asoc-dast-action@v1.0.3
+        uses: HCL-TECH-SOFTWARE/appscan-dast-action@v1.0.7
         with:
           baseurl:  https://cloud.appscan.com
           asoc_key: ${{ secrets.ASOC_API_KEY }}
           asoc_secret: ${{ secrets.ASOC_API_SECRET }}
-          application_id: 1ee58dd1-522f-4ec2-bb7d-0ad19f4b23de
-          scan_type: 'staging'
+          application_id: acd3ef50-6276-461d-8514-abc6e7113577
           dynamic_scan_type: dast
           starting_URL: 'https://demo.testfire.net?mode=demo'
           login_method: userpass
